@@ -4,5 +4,49 @@
     background-color: #2F2C43;
     &__upper-title, &__title {
         color: $whiteColor;
+        @include adaptiveClamp(font-size, 38, 28, 1200, 768, 1);
+    }
+    &__container {
+        padding: 0 20px;
+    }
+    .swiper-slide{
+        overflow: hidden;
+        margin-top: 50px;
+        grid-gap: 25px 15px;
+        .projectList {
+            border: 1px solid $whiteColor;
+            display: inline-block;
+            @include adaptiveClamp(padding-top, 36, 24, 1200, 768, 1);
+            @include adaptiveClamp(padding-right, 30, 28, 1200, 768, 1);
+            @include adaptiveClamp(padding-bottom, 30, 20, 1200, 768, 1);
+            padding-left: 23px;
+        }
+        li, .bold {
+            color: $whiteColor;
+            @include adaptiveClamp(margin-bottom, 30, 18, 1200, 768, 1);
+        }
+        .first-row, .second-row {
+            display: flex;
+            justify-content: space-evenly;
+            & > * {
+                border-radius: 15px;
+            }
+        }
+        .first-row {
+            margin-bottom: 25px;
+            gap: 15px;
+        }
+        .item_1 {
+            @include adaptiveClamp(width, 525, 200, 1200, 768, 1);
+        }
+        .item_2 {
+            @include adaptiveClamp(width, 300, 200, 1200, 768, 1);
+        }
+        .second-row {
+            gap: 15px;
+            &__item {
+                @include adaptiveClamp(width, 370, 220, 1200, 768, 1);
+            }
+        }
     }
 }

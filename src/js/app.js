@@ -21,7 +21,7 @@ import {
 // import AOS from 'aos'
 
 /* Раскомментировать для использования */
-import Swiper, { Navigation, Pagination, autoplay,  } from 'swiper'
+import Swiper, { Navigation, Pagination, autoplay, Grid  } from 'swiper'
 
 let menu = ['<div class="services__pagination-block"> <img src="../images/services-pagination__first-item.svg"> <p class="services__pagination-title">Complex design-project</p></div>',
              '<div class="services__pagination-block"> <img src="../images/services-pagination__second-item.svg"> <p class="services__pagination-title">Planning solution</p></div>',
@@ -49,9 +49,22 @@ const swiper = new Swiper('.services-swiper', {
   modules: [Navigation, Pagination]
 })
 
+let progressBarTitle = ['<span class="projects__pagination-title">All projects</span>',
+                        '<span class="projects__pagination-title">All projects</span>',
+                        '<span class="projects__pagination-title">All projects</span>',
+                        '<span class="projects__pagination-title">All projects</span>',
+                        '<span class="projects__pagination-title">All projects</span>',
+]
+
 const projectsSwiper = new Swiper('.projects__swiper', {
   loop: true,
   speed: 200,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'progressbar',
+  },
+  slidesPerView: 1,
+  modules: [Pagination]
 })
 
 
