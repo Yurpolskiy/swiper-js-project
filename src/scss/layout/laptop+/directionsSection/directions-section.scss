@@ -1,0 +1,59 @@
+.directions {
+    background: #F5F7FD;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__upper-title {
+        font-family: $upperTitleFont;
+    }
+    &__title {
+        line-height: 54px;
+    }
+    &__about {
+        font-size: $paragraphFontSize + 4;
+        line-height: 20px;
+        @include adaptiveClamp(width, 640, 440, 1200, 768, 1);
+    }
+    &__grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        @include adaptiveClamp(grid-column-gap, 20, 15, 1200, 768, 1);
+        @include adaptiveClamp(grid-row-gap, 150, 90, 1200, 768, 1);
+        img {
+            @include adaptiveClamp(width, 569, 350, 1200, 768, 1);
+        }
+    }
+    &__grid-item {
+        position: relative;
+        @include adaptiveClamp(height, 432, 265, 1200, 768, 1);
+        &_description {
+            position: absolute;
+            @include adaptiveClamp(width, 482, 330, 1200, 768, 1);
+            color: $whiteColor;
+            box-sizing: border-box;
+            @include adaptiveClamp(padding-top, 19, 10, 1200, 768, 1);
+            @include adaptiveClamp(padding-left, 36, 10, 1200, 768, 1);
+            @include adaptiveClamp(padding-bottom, 32, 25, 1200, 768, 1);
+            @include adaptiveClamp(padding-right, 86, 10, 1200, 768, 1);
+            background: $whiteColor;
+            left: 3.7%;
+            bottom: -15%;
+            &:after {
+                content: url(../../../images/grid-item_arrow.svg);
+                position: absolute;
+                right: 3%;
+                top: 15%;
+            }    
+            @include media(812) {
+                bottom: -30%;
+            }
+        }
+        &_description__project-info {
+            color: $grayColor;
+            font-size: $paragraphFontSize - 1;
+            line-height: 138%;
+            margin-top: 9px;
+            @include adaptiveClamp(font-size, 15, 12, 812, 768, 1);
+        }
+    }
+}

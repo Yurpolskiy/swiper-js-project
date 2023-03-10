@@ -1,1 +1,64 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Philosopher', sans-serif;
+}
+
+h1 {
+    font-size: $h1FontSize;
+}
+
+h2 {
+    font-size: $h2FontSize;
+}
+
+h3 {
+    font-size: $h3FontSize;
+}
+
+h4 {
+    font-size: $h4FontSize;
+}
+
+h5 {
+    font-size: $h5FontSize;
+}
+
+h6 {
+    font-size: $h6FontSize;
+}
+
+[class*='__upper-title'] {
+    font-family: $upperTitleFont;
+}
+
+[class*='__upper-title'], [class*='__title'] {
+    line-height: 138%;
+}
+[class*='__title'] {
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+.red  {
+    color: $redColor;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.order_btn {
+    background: $redColor;
+    font-family: $mainFont;
+    font-size: $paragraphFontSize + 2;
+    color: $whiteColor;
+    font-weight: 700;
+}

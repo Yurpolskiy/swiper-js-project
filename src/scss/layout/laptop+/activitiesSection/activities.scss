@@ -1,0 +1,108 @@
+.activities {
+    background-image: url(../../../images/Activities_background.png);
+    background-size: cover;
+    background-position: center;
+    &__container {
+        padding-top: 40px;
+    }
+    &__flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        padding-bottom: 116px;
+        margin-bottom: 60px;
+    }
+    &__service-description {
+        @include adaptiveClamp(width, 566, 340, 1200, 768, 1);
+        color: $secondaryBlackColor;
+        line-height: 141.5%;
+    }
+    &__order-blank {
+        margin-top: 30px;
+        gap: 11px;
+        display: flex;
+    }
+    &__input, &__order-blank_order-btn {
+        @include adaptiveClamp(width, 162, 130, 1200, 768, 1);
+        height: 50px;
+    }
+    &__input {
+        border: 1px solid #D5D5D5;
+        border-radius: 4px;
+        padding: 10px;
+        font-size: $paragraphFontSize + 2;
+        background: $whiteColor;
+        &::placeholder {
+            font-size: $paragraphFontSize;
+            color: $grayColor;
+        }
+    }
+    &__stages {
+        &-title {
+         font-weight: 600;
+         margin: 30px 0 15px
+    }
+    &-list {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -2;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 25px;
+            background: $blackColor;
+        }
+    }
+    &-list_elem {
+        counter-increment: step-counter;
+        list-style: none;
+        padding-bottom: 20px;
+        position: relative;
+        padding-left: 25px;
+        overflow: hidden;
+        &::before {
+            content: counter(step-counter);
+             margin-right: 5px;
+             box-shadow: 0 0 0 100px white;
+             color: white;
+             border-radius: 50%;
+             position: absolute;
+             z-index: -1;
+             left: 0;
+             top: 0;
+             text-align: center;
+             width: 20px;
+             height: 20px;
+        }
+    }
+}
+    .swiper-wrapper {
+        align-items: center;
+    }
+    .swiper-pagination {
+        height: 83px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .swiper-slide {
+        &-next, &-prev > img {
+            width: 0;
+            height: 0;
+        }
+        &-active > img {
+            @include adaptiveClamp(width, 627, 350, 1200, 768, 1);
+        }
+    }
+    .swiper-pagination-bullet {
+        width: fit-content;
+        background: $whiteColor;
+        &-active {
+            .services__pagination-block {
+                border: 1px solid $redColor;
+                }
+        }   
+    }
+}

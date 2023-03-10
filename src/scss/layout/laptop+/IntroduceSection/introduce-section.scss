@@ -1,0 +1,76 @@
+.introduce {
+    height: 100vh;
+    &__grid-container {
+        display: grid;
+        grid-template-columns: 0.85fr 1.1fr 2fr;
+        grid-template-rows: 1fr;
+        height: 100vh;
+    }
+    &__sidebar {
+        background-image: url(../../../images/sidebar-background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            height: 100vh;
+            background: $redColor;
+            width: 70px;
+        }
+        &_img-wrapper {
+            width: 53px;
+            height: 53px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $redColor;
+            box-shadow: 0px 4px 24px #BA2B36;
+            margin: 0 auto;
+        }
+    }
+    &__about {
+        max-width: 520px;
+        box-sizing: border-box;
+        @include adaptiveClamp(padding-top, 52, 30, 1200, 768, 1);
+        @include adaptiveClamp(padding-left, 39, 15, 1200, 768, 1);
+        @include adaptiveClamp(padding-right, 39, 15, 1200, 768, 1);
+        &_logo > img {
+            @include adaptiveClamp(width, 451, 300, 1200, 768);
+        }
+        &_underline {
+            width: 40%;
+            border: 1px solid $redColor;
+            margin-top: 80px;
+            margin-left: 10px;
+        }
+        &_title {
+            @include adaptiveClamp(margin-top, 55, 30, 1200, 768, 1);
+            line-height: 54px;
+        }
+        &_btn {
+            @include adaptiveClamp(width, 334, 240, 1200, 768, 1);
+            height: 65px;
+            border-radius: 8px;
+            @include adaptiveClamp(margin-top, 70, 40, 1200, 768, 1);
+        }
+    }
+    &__contact-us {
+        background-image: url(../../../images/first-section_commercial-img.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include adaptiveClamp(padding-left, 82, 40, 1200, 768, 1);
+                @include adaptiveClamp(padding-top, 52, 30, 1200, 768, 1);
+        &_number {
+            color: $whiteColor;
+            @include adaptiveClamp(font-size, 31, 24, 1200, 768, 1);
+        }
+        &_underline {
+            width: 70%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.46);
+            margin-top: 12px;
+        }
+    }
+}

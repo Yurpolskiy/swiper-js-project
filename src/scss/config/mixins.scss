@@ -65,6 +65,17 @@
     @content;
   }
 }
+@mixin mobile($width) {
+  @media (min-width: #{$width + '.98' + px}) {
+    @content
+  }
+}
+
+@mixin hidden-mobile() {
+  @media (max-width: 767px) {
+    @content
+  }
+}
 
 // !:not (last-child)
 @mixin notLast() {

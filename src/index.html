@@ -5,12 +5,22 @@
   })
   <body>
     <div class="wrapper">
-      @@include('html/header.html', {})
-      <main class="page">
+      <main class="page page__hidden-mobile">
+        @@include('html/laptop+/introduceSection/Introduce.html', {})
+        @@include('html/laptop+/DirectionSection/ourDirections.html', {})
+        @@include('html/laptop+/ActivitiesSection/activities.html', {})
+        @@include('html/laptop+/CalculateSection/calculateSection.html', {})
+        @@include('html/laptop+/ProjectsSection/projectsSection.html', {})
         <div data-observ></div>
         
       </main>
+      <main class="page page__mobile">
+        
+      </main>
       @@include('html/footer.html', {})
+    </div>
+    <div class="wrapper wrapper__mobile">
+      
     </div>
     @@include('html/script.html', {})
   </body>

@@ -1,0 +1,43 @@
+.calculate {
+    background: $redColor;
+    padding: 60px 0 52px 0;
+    &__container {
+        display: flex;
+    }
+    &__description {
+        background: $whiteColor;
+        color: $secondaryBlackColor;
+        @include adaptiveClamp (width, 789, 450, 1200, 768, 1);
+        border-radius: 22px 0px 0px 22px;
+        @include adaptiveClamp(padding-top, 29, 15, 1200, 768, 1);
+        @include adaptiveClamp(padding-right, 89, 25, 1200, 768, 1);
+        @include adaptiveClamp(padding-bottom, 43, 15, 1200, 768, 1);
+        @include adaptiveClamp(padding-left, 52, 25, 1200, 768, 1);
+        & > h2 {
+            margin-bottom: 11px;
+        }
+        & > p {
+            margin-bottom: 30px;
+        }
+        &-btn { 
+            width: 191px;
+            height: 50px;
+        }
+    }
+    &__signs {
+        background: $secondaryRedColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include adaptiveClamp(width, 394, 240, 1200, 768, 1);
+        width: 100%;
+        &_images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 20px;
+            width: 80%;
+            @include adaptiveClamp(max-width, 220, 240, 1200, 768, 2);
+        }
+    }
+}

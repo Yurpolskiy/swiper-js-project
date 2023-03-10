@@ -17,9 +17,20 @@ body {
 * Например header__container, main__container и т.д.
 */
 [class*="__container"] {
-  max-width: rem($containerWidth + $mainOffset * 2);
+  max-width: rem($maxWidthContainer + $mainOffset * 2);
   margin: 0 auto;
   padding: 0 rem($mainOffset);
+  box-sizing: border-box;
+}
+[class*="__hidden-mobile"] {
+  @include hidden-mobile {
+    display: none;
+  }
+}
+[class*="__mobile"] {
+  @include mobile(768) {
+    dispaly: none;
+  }
 }
 // Стили отзывчивых картинок (IBG) ============================================
 [class*="-ibg"] {

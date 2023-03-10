@@ -33,7 +33,7 @@ body {
 	width: 100%;
   height: 100%;
 	font-size: $fontSize;
-  font-family: $fontFamily;
+  font-family: $mainFont, sans-serif;
   font-weight: $fontWeight;
 	line-height: 1;
 }

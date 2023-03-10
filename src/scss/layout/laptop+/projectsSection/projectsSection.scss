@@ -1,0 +1,8 @@
+.projects {
+    background-image: url(../../../images/projects-section__background.png);
+    padding: 40px 0 100px 0;
+    background-color: #2F2C43;
+    &__upper-title, &__title {
+        color: $whiteColor;
+    }
+}

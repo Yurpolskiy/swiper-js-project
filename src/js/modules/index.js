@@ -1,6 +1,7 @@
 import toggleBodyLock from './../helpers/toggleBodyLock'
 import { html, firstScreen, header, burgerButton } from './../helpers/elementsNodeList'
 
+
 // logger (Full Logging System) ==========================================================================
 function FLS(message) {
   setTimeout(() => (window.FLS ? console.log(message) : null), 0)
@@ -126,6 +127,8 @@ const menuClose = () => {
   toggleBodyLock(false)
   html.classList.remove('menu-open')
 }
+
+
 
 export {
   FLS,

@@ -21,7 +21,39 @@ import {
 // import AOS from 'aos'
 
 /* Раскомментировать для использования */
-// import Swiper, { Navigation, Pagination } from 'swiper'
+import Swiper, { Navigation, Pagination, autoplay,  } from 'swiper'
+
+let menu = ['<div class="services__pagination-block"> <img src="../images/services-pagination__first-item.svg"> <p class="services__pagination-title">Complex design-project</p></div>',
+             '<div class="services__pagination-block"> <img src="../images/services-pagination__second-item.svg"> <p class="services__pagination-title">Planning solution</p></div>',
+              '<div class="services__pagination-block"> <img src="../images/services-pagination__third-item.svg"> <p class="services__pagination-title">Author supervision</p></div>',
+               '<div class="services__pagination-block"> <img src="../images/services-pagination__fourth-item.svg"> <p class="services__pagination-title">Repair and decoration</p></div>',
+                '<div class="services__pagination-block"> <img src="../images/services-pagination__fifth-item.svg"> <p class="services__pagination-title">Express-design</p></div>'
+              ]
+const swiper = new Swiper('.services-swiper', {
+  loop: true,
+  speed: 200,
+  autoplay: {
+    delay: 2000
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    type: 'bullets',
+    renderBullet: function(index, className) {
+      return '<div class="' + className + '">' + (menu[index]) + '</div>'
+    }
+  },
+  navigation: {
+    el: '.swiper-navigation'
+  },
+  modules: [Navigation, Pagination]
+})
+
+const projectsSwiper = new Swiper('.projects__swiper', {
+  loop: true,
+  speed: 200,
+})
+
 
 // Включить/выключить FLS (Full Logging System) (в работе)
 window['FLS'] = location.hostname === 'localhost'

@@ -1,10 +1,12 @@
 $maxWidth: 1920; // максимальная ширина страницы
 $minWidth: 320; // минимальная ширина телефона
-$maxWidthContainer: 1200; // ширина контейнера с учетом padding слева и справа
-$containerWidth: 1160; // ширина контейнера из макета
+$maxWidthContainer: 1160; // ширина контейнера с учетом padding слева и справа
+$containerWidth: 1920; // ширина контейнера из макета
 
-$mainOffset: 15; // отступы безопасности для контейнера
-$mainFont: ''; // !указать здесь основное семейство шрифта
+$mainOffset: 30; // отступы безопасности для контейнера
+$titleFontFamily: 'Philosopher';
+$upperTitleFontFamily: 'Liana';
+$mainFontFamily: 'Proxima Nova'; // !указать здесь основное семейство шрифта
 $mainWeight: 400; // !указать здесь основное начертание шрифта
 
 $headerHeight: 100;
@@ -15,15 +17,32 @@ $mainRadius: rem(10);
 $whiteColor: #fff;
 $blackColor: #131313;
 $grayColor: #6f6f6f;
-$redColor: #ff4040;
+$redColor: #DC3441;
+$secondaryRedColor: #F33745;
+$darkColor: #434057;
+$goldColor: #AE7D00;
+$secondaryBlackColor: #434057;
+
 
 $firstAccentColor: $blackColor;
 $secondAccentColor: $redColor;
 
-$fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
+$h1FontSize: rem(49);
+$h2FontSize: rem(38);
+$h3FontSize: rem(35);
+$h4FontSize: rem(30);
+$h5FontSize: rem(28);
+$h6FontSize: rem(20);
+$paragraphFontSize: 16px;
+
+
 $fontColor: $blackColor; // Цвет шрифта по умолчанию
 $fontSize: rem(16); // Размер шрифта по умолчанию
 $fontWeight: $mainWeight; // Жирность шрифта по умолчанию
+
+$mainFont:  $mainFontFamily, sans-serif;
+$upperTitleFont: $upperTitleFontFamily, sans-serif;
+$titleFont: $titleFontFamily, sans-serif;
 
 $standartTrans: all 280ms ease-in-out 0ms;
 
