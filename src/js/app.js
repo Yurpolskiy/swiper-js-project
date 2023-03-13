@@ -49,12 +49,6 @@ const swiper = new Swiper('.services-swiper', {
   modules: [Navigation, Pagination]
 })
 
-let progressBarTitle = ['<span class="projects__pagination-title">All projects</span>',
-                        '<span class="projects__pagination-title">All projects</span>',
-                        '<span class="projects__pagination-title">All projects</span>',
-                        '<span class="projects__pagination-title">All projects</span>',
-                        '<span class="projects__pagination-title">All projects</span>',
-]
 
 const projectsSwiper = new Swiper('.projects__swiper', {
   loop: true,
@@ -67,6 +61,17 @@ const projectsSwiper = new Swiper('.projects__swiper', {
   modules: [Pagination]
 })
 
+
+const projectsPaginationTitles = document.querySelectorAll('.projects__progressbar-navigation_item')
+
+document.querySelector('.projects__progressbar-navigation_item').classList.add('active')
+projectsSwiper.on('slideChange', () => {
+  projectsPaginationTitles.forEach(function(span) {
+    span.classList.remove('active')
+  })
+  let activeSpanIndex = projectsSwiper.realIndex
+  projectsPaginationTitles[activeSpanIndex].classList.add('active')
+})
 
 // Включить/выключить FLS (Full Logging System) (в работе)
 window['FLS'] = location.hostname === 'localhost'

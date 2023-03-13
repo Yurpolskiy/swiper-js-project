@@ -2,33 +2,75 @@
     <div class="projects__container">
         <h2 class="projects__upper-title">Projects</h2>
         <h2 class="projects__title"><span class="red">more than</span> 1,400 completed projects in 12 years on the territory of Europe and the world</h2>
+        <div class="projects__progressbar-navigation">
+            <span class="projects__progressbar-navigation_item">All projects</span>
+            <span class="projects__progressbar-navigation_item">Restaurants</span>
+            <span class="projects__progressbar-navigation_item">Stores</span>
+            <span class="projects__progressbar-navigation_item">Offices</span>
+            <span class="projects__progressbar-navigation_item">Appartaments & Cottages</span>
+        </div>
         <div class="swiper projects__swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="first-row">
-                        <div class="projectList">
-                            <ul>
-                                <li><span class="bold">Type of establishment:</span> Restaurant</li>
-                                <li><span class="bold">Total area:</span> 140m2</li>
-                                <li><span class="bold">City:</span> Frankfurt</li>
-                                <li><span class="bold">Address:</span> Any adress</li>
-                                <li><span class="bold">Implementation time:</span> 23 days</li>
-                                <li><span class="bold">The cost of design:</span> 2500r. / m²</li>
-                            </ul>
-                        </div>
-                        <img class="item_1" src="../../../images/projects__all-projects_1.jpg" alt="img">
-                        <img class="item_2" src="../../../images/projects__all-projects_2.jpg" alt="img">
-                    </div> 
-                    <div class="second-row">
-                        <img class="second-row__item" src="../../../images/projects__all-projects_3.jpg" alt="img">
-                        <img class="second-row__item" src="../../../images/projects__all-projects_4.jpg" alt="img">
-                        <img class="second-row__item" src="../../../images/projects__all-projects_5.jpg" alt="img">
-                    </div>          
-                </div>
-                <div class="swiper-slide">
-                </div>
-                <div class="swiper-slide">
-                </div>
+                @@include('projectsSectionSlideComponent.html', {
+                   'establishmentType': 'All projects',
+                   'area': '140m',
+                   'city': 'Frankfurt',
+                   'time': '23 days',
+                   'designCost': '2500$' ,
+                   'item1_src': '../../../images/projects__all-projects_1.jpg',
+                   'item2_src': '../../../images/projects__all-projects_2.jpg',
+                   'item3_src': '../../../images/projects__all-projects_3.jpg',
+                   'item4_src': '../../../images/projects__all-projects_4.jpg',
+                   'item5_src': '../../../images/projects__all-projects_5.jpg',
+                })
+                @@include('projectsSectionSlideComponent.html', {
+                    'establishmentType': 'Restaurant',
+                    'area': '160m',
+                    'city': 'New York',
+                    'time': '28 days',
+                    'designCost': '3800$' ,
+                    'item1_src': '../../../images/projects__restaurants_1.jpg',
+                    'item2_src': '../../../images/projects__restaurants_2.jpg',
+                    'item3_src': '../../../images/projects__restaurants_3.png',
+                    'item4_src': '../../../images/projects__restaurants_4.jpg',
+                    'item5_src': '../../../images/projects__restaurants_5.jpg',
+                 })
+                 @@include('projectsSectionSlideComponent.html', {
+                    'establishmentType': 'Stores',
+                    'area': '180m',
+                    'city': 'London',
+                    'time': '30 days',
+                    'designCost': '4000$' ,
+                    'item1_src': '../../../images/projects__stores_1.jpg',
+                    'item2_src': '../../../images/projects__stores_2.jpg',
+                    'item3_src': '../../../images/projects__stores_3.jpg',
+                    'item4_src': '../../../images/projects__stores_4.jpg',
+                    'item5_src': '../../../images/projects__stores_5.jpg',
+                 })
+                 @@include('projectsSectionSlideComponent.html', {
+                    'establishmentType': 'Offices',
+                    'area': '220m',
+                    'city': 'Minisota',
+                    'time': '35 days',
+                    'designCost': '4600$' ,
+                    'item1_src': '../../../images/projects__offices_1.jpg',
+                    'item2_src': '../../../images/projects__offices_2.jpg',
+                    'item3_src': '../../../images/projects__offices_3.jpg',
+                    'item4_src': '../../../images/projects__offices_4.jpg',
+                    'item5_src': '../../../images/projects__offices_5.jpg',
+                 })
+                 @@include('projectsSectionSlideComponent.html', {
+                    'establishmentType': 'Cottages',
+                    'area': '240m',
+                    'city': 'London',
+                    'time': '60 days',
+                    'designCost': '7000$' ,
+                    'item1_src': '../../../images/projects__cottages_1.jpg',
+                    'item2_src': '../../../images/projects__cottages_2.jpg',
+                    'item3_src': '../../../images/projects__cottages_3.jpg',
+                    'item4_src': '../../../images/projects__cottages_4.jpg',
+                    'item5_src': '../../../images/projects__cottages_5.jpg',
+                 })
             </div>
             <div class="swiper-pagination"></div>
     </div>

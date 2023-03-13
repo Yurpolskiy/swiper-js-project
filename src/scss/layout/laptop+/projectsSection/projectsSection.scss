@@ -36,11 +36,15 @@
             margin-bottom: 25px;
             gap: 15px;
         }
+        .item_3, .item_4, .item_5 {
+            @include adaptiveClamp(height, 297, 177, 1200, 768, 1);
+        }
         .item_1 {
             @include adaptiveClamp(width, 525, 200, 1200, 768, 1);
         }
         .item_2 {
             @include adaptiveClamp(width, 300, 200, 1200, 768, 1);
+            @include adaptiveClamp(height, 426, 284, 1200, 768, 1);
         }
         .second-row {
             gap: 15px;
