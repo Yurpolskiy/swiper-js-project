@@ -1,0 +1,54 @@
+.benefits {
+    padding-top: 30px;
+    &__container {
+        padding: 0 10px;
+    }
+    &__logo {
+        width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        > img {
+            @include adaptiveClamp(width, 570, 380, 1200, 768, 1);
+        }
+    }
+    h6 {
+        @include adaptiveClamp(width, 400, 250, 1200, 768, 1);
+        font-weight: 700;
+        line-height: 26px;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content_item-1 {
+        &_border {
+            border: 2px solid $secondaryBlackColor;
+            width: 162px;
+            @include adaptiveClamp(margin-top, 41, 25, 1200, 768, 1);
+            @include adaptiveClamp(margin-bottom, 41, 25, 1200, 768, 1);
+        }
+        &_subtitle {
+            color: $secondaryBlackColor;
+            line-height: 23px;
+            width: 213px;
+        }
+    }
+    &__content_img {
+        @include adaptiveClamp(width, 430, 250, 1700, 768, 1);
+        align-self: flex-end;
+        position: relative;
+    }
+    &__content_item-3 {
+        &_article-block {
+            margin-bottom: 22px;
+        }
+        &_article-description {
+            line-height: 20px;
+            @include adaptiveClamp(width, 370, 250, 1400, 768, 1);
+        }
+        &_article_title {
+            margin-bottom: 10px;
+        }
+    }
+}

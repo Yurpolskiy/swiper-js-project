@@ -9,7 +9,20 @@
     &__container {
         padding: 0 20px;
     }
-    .swiper-slide{
+    &__progressbar-navigation {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0 10px 0;
+        &_item {
+            color: $paginationNavColor;
+        }
+        .active {
+            color: $whiteColor;
+            font-weight: 700;
+            transform: translateY(-5px);
+        }
+    }
+    .swiper-slide {
         overflow: hidden;
         margin-top: 50px;
         grid-gap: 25px 15px;
