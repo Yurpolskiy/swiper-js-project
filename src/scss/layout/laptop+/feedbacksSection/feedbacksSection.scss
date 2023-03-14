@@ -1,0 +1,109 @@
+.feedbacks {
+    background: $feedbacksBackgroundColor;
+    padding: 63px 0 110px 0;
+    &__upper-title {
+        color: $redColor;
+    }
+    &__title {
+        color: $whiteColor;
+        margin-bottom: 70px;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        gap: 20px;
+        &_social {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &-title {
+                color: $whiteColor;
+                line-height: 30px;
+                width: 250px;
+            }
+            &-img {
+                width: 125px;
+                margin-bottom: 15px;
+                
+            }
+        }
+        &_social-icons {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+        }
+        &_social-icons__wrapper {
+            cursor: pointer;
+            background: $redColor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+        }
+        .tg, .facebook, .instagram {
+            transition: .4s ease;
+        }
+        .tg {
+            &:hover {
+                background: $whiteColor;
+            }
+            &:before {
+                content: url('../../../../images/telegram_icon.svg')
+            }
+            &:hover::before {
+                content: url('../../../../images/telegram_icon_black.svg')
+            }    
+        }
+        .facebook {
+            &:hover {
+                background: $whiteColor;
+            }
+            &:before {
+                content: url('../../../../images/facebook_icon.svg');
+            }
+            &:hover::before {
+                content: url('../../../../images/facebook__icon-black.svg');
+            }
+        }
+        .instagram {
+            &:hover {
+                background: $whiteColor;
+            }
+            &::before {
+                content: url('../../../../images/instagram_icon.svg');
+            }
+            &:hover::before {
+                content: url('../../../../images/instagram_icon-black.svg');
+            }
+        } 
+        &_article {
+            background: $darknestGrayColor;
+            position: relative;
+            z-index: 2;
+            border-radius: 10px;
+            box-sizing: border-box;
+            max-width: 810px;
+            @include adaptiveClamp(padding-top, 59, 15, 1200, 768, 1);
+            @include adaptiveClamp(padding-bottom, 59, 15, 1200, 768, 1);
+            @include adaptiveClamp(padding-right, 65, 20, 1200, 768, 1);
+            @include adaptiveClamp(padding-left, 65, 20, 1200, 768, 1);
+            &::before {
+                content: url('../../../../images/treangle.png');
+                position: absolute;
+                z-index: -1;
+                left: -6%;
+                top: 5%;
+            }
+            p {
+                color: $whiteColor;
+                line-height: 22px;
+            }
+            &_first-paragraph {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

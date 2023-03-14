@@ -73,6 +73,10 @@ projectsSwiper.on('slideChange', () => {
   projectsPaginationTitles[activeSpanIndex].classList.add('active')
 })
 
+const svg = document.getElementById('SvgClass')
+svg.style.fill = 'blue'
+
+
 // Включить/выключить FLS (Full Logging System) (в работе)
 window['FLS'] = location.hostname === 'localhost'
 

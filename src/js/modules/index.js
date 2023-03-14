@@ -128,8 +128,6 @@ const menuClose = () => {
   html.classList.remove('menu-open')
 }
 
-
-
 export {
   FLS,
   isWebp,
