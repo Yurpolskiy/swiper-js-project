@@ -1,0 +1,47 @@
+.employees {
+    padding-top: 90px;
+    &__flex-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 23px;
+        position: relative;
+        &::before {
+            content: 'interior';
+            position: absolute; 
+            font-family: $titleFont;
+            @include adaptiveClamp(font-size, 170, 90, 1200, 768, 1);
+            @include adaptiveClamp(width, 932, 400, 1200, 768, 1); 
+            left: 7%;
+            bottom: 14%;
+        }
+        &::after {
+            content: 'DESIGN';
+            position: absolute;
+            font-family: $titleFont;
+            @include adaptiveClamp(font-size, 170, 90, 1200, 768, 1);
+            @include adaptiveClamp(width, 932, 400, 1200, 768, 1); 
+            right: 0;
+            bottom: 0;
+        }
+    }
+    &__block-1 {
+        @include adaptiveClamp(margin-top, 60, 40, 1200, 768, 1);
+        &_item-1 {
+            margin-bottom: 42px;
+        }
+    }
+    &__block-2 {
+        &_item-1 {
+            margin-bottom: 42px;
+        }
+    }
+    &__block-3 {
+        @include adaptiveClamp(margin-top, 274, 60, 1200, 768, 1);
+        &_item-1 {
+            margin-bottom: 42px;
+        }
+    }
+    img {
+        @include adaptiveClamp(width, 360, 220, 1200, 768, 1);
+    }
+}

@@ -1,6 +1,6 @@
 .feedbacks {
     background: $feedbacksBackgroundColor;
-    padding: 63px 0 110px 0;
+    padding-top: 63px;
     &__upper-title {
         color: $redColor;
     }
@@ -42,6 +42,13 @@
             border-radius: 50%;
             width: 42px;
             height: 42px;
+        }
+        &_social-subtitle {
+            color: $feedbacksPositionColor;
+            width: 210px;
+            line-height: 19px;
+            margin-top: 20px;
+            font-size: $paragraphFontSize - 2px;
         }
         .tg, .facebook, .instagram {
             transition: .4s ease;
@@ -104,6 +111,15 @@
             &_first-paragraph {
                 margin-bottom: 20px;
             }
+        }
+    }
+    .reviews {
+        padding-top: 110px;
+        &__upper-title, &__title {
+            color: $whiteColor;
+        }
+        &__img {
+            width: 100%;
         }
     }
 }
