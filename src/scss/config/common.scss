@@ -53,14 +53,19 @@ p {
     font-weight: bold;
 }
 
+.black {
+    color: $secondaryBlackColor;
+}
+
 .underline {
     text-decoration: underline;
 }
 
-.order_btn {
+[class*="_btn"] {
     background: $redColor;
     font-family: $mainFont;
     font-size: $paragraphFontSize + 2;
     color: $whiteColor;
     font-weight: 700;
+    border-radius: 7px;
 }

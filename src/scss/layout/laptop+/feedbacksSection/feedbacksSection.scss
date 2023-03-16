@@ -35,13 +35,16 @@
         }
         &_social-icons__wrapper {
             cursor: pointer;
-            background: $redColor;
+            background: $whiteColor;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
             width: 42px;
             height: 42px;
+            &:hover {
+                transform: translateY(-5px);
+            }
         }
         &_social-subtitle {
             color: $feedbacksPositionColor;
@@ -55,35 +58,35 @@
         }
         .tg {
             &:hover {
-                background: $whiteColor;
+                background: $redColor;
             }
             &:before {
-                content: url('../../../../images/telegram_icon.svg')
+                content: url('../../../../images/telegram_icon_black.svg')
             }
             &:hover::before {
-                content: url('../../../../images/telegram_icon_black.svg')
+                content: url('../../../../images/telegram_icon.svg')
             }    
         }
         .facebook {
             &:hover {
-                background: $whiteColor;
+                background: $redColor;
             }
             &:before {
-                content: url('../../../../images/facebook_icon.svg');
+                content: url('../../../../images/facebook__icon-black.svg');
             }
             &:hover::before {
-                content: url('../../../../images/facebook__icon-black.svg');
+                content: url('../../../../images/facebook_icon.svg');
             }
         }
         .instagram {
             &:hover {
-                background: $whiteColor;
+                background: $redColor;
             }
             &::before {
-                content: url('../../../../images/instagram_icon.svg');
+                content: url('../../../../images/instagram_icon-black.svg');
             }
             &:hover::before {
-                content: url('../../../../images/instagram_icon-black.svg');
+                content: url('../../../../images/instagram_icon.svg');
             }
         } 
         &_article {
@@ -114,7 +117,7 @@
         }
     }
     .reviews {
-        padding-top: 110px;
+        @include adaptiveClamp(padding-top, 110, 50, 1200, 768, 1);
         &__upper-title, &__title {
             color: $whiteColor;
         }

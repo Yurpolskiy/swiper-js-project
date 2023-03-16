@@ -1,0 +1,101 @@
+.special-offer {
+    overflow: hidden;
+    &__container {
+        padding-top: 93px;
+        border-top: 1px solid $blackColor;
+    }
+    &__subtitle {
+        width: 81%;
+        font-size: $paragraphFontSize - 1px;
+        line-height: 23px;
+    }
+    &__offer {
+        width: 57%;
+        margin: 24px 0 33px 0;
+    }
+    &__services {
+        &-container {
+            margin-bottom: 65px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &_item:first-child {
+            @include adaptiveClamp(width, 483, 320, 1200, 768, 1);
+            background: $secondaryBlackColor;
+            padding-top: 30px;
+            @include adaptiveClamp(padding-right, 44, 22, 1200, 768, 1);
+            padding-bottom: 40px;
+            @include adaptiveClamp(padding-left, 32, 16, 1200, 768, 1);
+            border-radius: 20px;
+            p {
+                line-height: 29px;
+            }
+        }
+        &_item:last-child {
+            @include adaptiveClamp(width, 483, 320, 1200, 768, 1);
+            background: $redColor;
+            padding-top: 30px;
+            @include adaptiveClamp(padding-right, 53, 28, 1200, 768, 1);
+            padding-bottom: 40px;
+            @include adaptiveClamp(padding-left, 32, 16, 1200, 768, 1);
+            border-radius: 20px;
+            p:first-of-type {
+                @include adaptiveClamp(margin-top, 20, 10, 1200, 768, 1);
+                @include adaptiveClamp(margin-bottom, 20, 10, 1200, 768, 1);
+            }
+        }
+        &_item-title, &_item-article {
+            color: $whiteColor;
+        }
+        &_item-subtitle {
+            font-weight: 700;
+            margin: 12px 0;
+        }
+        &_item-article {
+            line-height: 22px;
+        }
+    }
+    &__contact-us {
+        &_flex-container {
+            display: flex;
+            justify-content: space-between; 
+        }
+        &_inputs-block {
+            @include adaptiveClamp(width, 569, 340, 1200, 768, 1);
+            padding: 35px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            position: relative;
+            box-shadow: -16px 11px 90px -29px rgba(0,0,0,0.35);
+            & > &_phone, &_problem-description, &_email {
+                background: $inputBackgroundColor;
+                border-radius: 5px;
+                width: 100%;
+                font-size: $paragraphFontSize;
+                padding: 9px 0 0 20px;
+                text-align: left;
+            }
+            &_problem-description {
+                @include adaptiveClamp(height, 81, 50, 1200, 768, 1);
+            }
+            input {
+                height: 48px;
+            }
+            &_btn {
+                align-self: flex-start;
+                height: 50px;
+                width: 191px;
+            }
+        }
+        &_article {
+            position: relative;
+            @include adaptiveClamp(width, 371, 270, 1200, 768, 1);
+            line-height: 29px;
+            &-description {
+                margin-top: 20px;
+            }
+        }
+    }
+}

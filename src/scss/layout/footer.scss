@@ -1,13 +1,128 @@
 .footer {
-  padding: rem(20) 0;
-  background: $blackColor;
-  // .footer__container
-  &__container {
+  &__flex-container {
     display: flex;
-    align-items: center;
-    @include media(510) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
   }
+   &__video-appeal {
+    padding: 40px 0 30px 0;
+    background: $videoAppealBackgroundColor;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    &__img {
+      @include adaptiveClamp(width, 274, 200, 1200, 768, 1);
+      max-height: 174px;
+    }
+      &__article {
+    @include adaptiveClamp(margin-right, 35, 15, 1200, 768, 1);
+    @include adaptiveClamp(margin-left, 30, 12, 1200, 768, 1);
+    }
+    &__article-title {
+      color: $whiteColor;
+    }
+    &__article-description {
+      color: $secondaryGrayColor;
+      line-height: 20px;
+      @include adaptiveClamp(font-size, 16, 13, 1200, 768, 1);
+      @include adaptiveClamp(width, 521, 330, 1200, 768, 1);
+    }
+   }
+   &__contact-me {
+    padding-bottom: 20px;
+    @include adaptiveClamp(padding-top, 30, 15, 1200, 768, 1);
+    @include adaptiveClamp(padding-left, 36, 15, 1200, 768, 1);
+    width: 30%;
+    background: $contactUsBackgroundColor;
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+    &_item-title {
+      color: $footerContactMeColor;
+    }
+    &_item {
+      color: $whiteColor;
+    }
+    &_social-links {
+      &_title {
+        color: $whiteColor;
+      }
+      &_wrapper {
+        display: flex;
+        gap: 15px;
+      }
+      &_wrapper-item {
+        margin-top: 25px;
+        @include adaptiveClamp(height, 50, 40, 1200, 768, 1);
+        @include adaptiveClamp(width, 50, 40, 1200, 768, 1);
+        background: $videoAppealBackgroundColor;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: .3s ease;
+        &:hover {
+          background: $redColor;
+          transform: translateY(-5px);
+        }
+      }
+      .telegram {
+        &::after {
+          content: url('../../images/telegram_icon_black.svg');
+        }
+        &:hover {
+          &::after {
+            content: url('../../images/telegram_icon.svg');
+          }
+        }
+      }
+      .instagram {
+        &::after {
+          content: url('../../images/instagram_icon-black.svg');
+        }
+        &:hover {
+          &::after {
+            content: url('../../images/instagram_icon.svg');
+          }
+        }
+      }
+      .facebook {
+        &::after {
+          content: url('../../images/facebook__icon-black.svg');
+        }
+        &:hover::after {
+          content: url('../../images/facebook_icon.svg');
+        }
+      }
+    }
+   }
+   &__page-navigation {
+    background: $darkBlueColor;
+    padding: 22px 0;
+    &_wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    &_item > a {
+      color: $footerPageNavigationColor;
+      font-weight: 600;
+    }
+   }
+   .border {
+    border: 1px solid $footerPageNavigationColor;
+   }
+   &__end-logo {
+    @include adaptiveClamp(padding-top, 28, 14, 1200, 768, 1);
+    @include adaptiveClamp(padding-bottom, 28, 14, 1200, 768, 1);
+    background: $redColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > img {
+      @include adaptiveClamp(width, 370, 220, 1200, 768, 1);
+    }
+   }
 }
