@@ -1,0 +1,80 @@
+.activities__mobile {
+    &_swiper-slide {
+        margin-top: 23px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_title {
+            @include adaptiveClamp(width, 250, 125, 767, 375, 1);
+            @include adaptiveClamp(letter-spacing, 0.05, 0.02, 767, 375, 1);
+            color: #343149;
+            @include adaptiveClamp(line-height, 32, 18, 767, 375, 1);
+            @include adaptiveClamp(font-size, 22, 14, 767, 375, 1);
+        }
+        &_img {
+            @include adaptiveClamp(width, 350,  175, 767, 375, 1);
+        }
+    }
+    &_swiper-pagination_title-container {
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+    &_swiper-pagination_title_item {
+        @include adaptiveClamp(font-size, 20, 12, 767, 375, 1);
+        display: inline-block;
+        @include adaptiveClamp(width, 200, 130, 767, 375, 1);
+    }
+    &_swiper-title {
+        font-weight: 700;
+    }
+    &_stages-swiper-slide {
+        padding: 10px 0 10px 7px;
+        box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.05);
+        border-radius: 9px;
+        @include adaptiveClamp(width, 220, 150, 767, 375, 1);
+        height: 120px;
+    }
+    &_stages-swiper-slide_number {
+        height: 25px;
+        width: 25px;
+        background: #434057;
+        color: $whiteColor;
+        border-radius: 50%;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    &_stages-swiper_slide-title {
+        line-height: 20px;
+        @include adaptiveClamp(font-size, 18, 14, 767, 375, 1);
+        margin-top: 15px;
+        @include adaptiveClamp(width, 180, 120, 767, 375, 1);
+    }
+    &_make-an-order_btn {
+        width: 80vw;
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        border-radius: 8px;
+        margin: 30px auto 0 auto;
+    }
+    &_make-an-order_wrapper {
+        margin: 0 auto;
+        width: fit-content;
+    }
+}
+.swiper-pagination-progressbar-fill {
+    background: $redColor!important;
+}
+.active {
+    transition: .2s ;
+    font-weight: 700;
+    @include adaptiveClamp(font-size, 22, 14, 767, 375, 1);
+    transform: translateY(-5px);
+}

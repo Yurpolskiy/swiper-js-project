@@ -65,8 +65,8 @@
     @content;
   }
 }
-@mixin mobile($width) {
-  @media (min-width: #{$width + '.98' + px}) {
+@mixin mobile() {
+  @media (min-width: 768px) {
     @content
   }
 }

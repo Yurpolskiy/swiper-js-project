@@ -128,6 +128,102 @@ const menuClose = () => {
   html.classList.remove('menu-open')
 }
 
+// свайпер
+
+import Swiper, { Navigation, Pagination, Autoplay  } from 'swiper'
+
+let menu = ['<div class="services__pagination-block"> <img src="../images/services-pagination__first-item.svg"> <p class="services__pagination-title">Complex design-project</p></div>',
+             '<div class="services__pagination-block"> <img src="../images/services-pagination__second-item.svg"> <p class="services__pagination-title">Planning solution</p></div>',
+              '<div class="services__pagination-block"> <img src="../images/services-pagination__third-item.svg"> <p class="services__pagination-title">Author supervision</p></div>',
+               '<div class="services__pagination-block"> <img src="../images/services-pagination__fourth-item.svg"> <p class="services__pagination-title">Repair and decoration</p></div>',
+                '<div class="services__pagination-block"> <img src="../images/services-pagination__fifth-item.svg"> <p class="services__pagination-title">Express-design</p></div>'
+              ]
+const swiper = new Swiper('.services-swiper', {
+  loop: true,
+  speed: 200,
+  autoplay: {
+    delay: 2000
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    type: 'bullets',
+    renderBullet: function(index, className) {
+      return '<div class="' + className + '">' + (menu[index]) + '</div>'
+    }
+  },
+  navigation: {
+    el: '.swiper-navigation'
+  },
+  modules: [Pagination, Autoplay]
+})
+
+
+const projectsSwiper = new Swiper('.projects__swiper', {
+  loop: true,
+  autoplay: {
+    delay: 3000
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'progressbar',
+  },
+  slidesPerView: 1,
+  modules: [Pagination, Autoplay]
+})
+
+
+const projectsPaginationTitles = document.querySelectorAll('.projects__progressbar-navigation_item')
+
+document.querySelector('.projects__progressbar-navigation_item').classList.add('active')
+projectsSwiper.on('slideChange', () => {
+  projectsPaginationTitles.forEach(function(span) {
+    span.classList.remove('active')
+  })
+  let activeSpanIndex = projectsSwiper.realIndex
+  projectsPaginationTitles[activeSpanIndex].classList.add('active')
+})
+
+const activitesMobileSwiper = new Swiper('.activities__mobile_swiper', {
+  loop: true,
+  autoplay: {
+    delay: 3000
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'progressbar'
+  },
+  modules: [Pagination, Autoplay]
+})
+
+const activitiesMobileSwiperTitle = document.querySelectorAll('.activities__mobile_swiper-pagination_title_item')
+document.querySelector('.activities__mobile_swiper-pagination_title_item').classList.add('active')
+activitesMobileSwiper.on('slideChange', () => {
+  activitiesMobileSwiperTitle.forEach(function(span)  {
+    span.classList.remove('active')
+  })
+  let activeSpanIndex = activitesMobileSwiper.realIndex
+  activitiesMobileSwiperTitle[activeSpanIndex].classList.add('active')
+})
+
+const stagesMobileSwiper = new Swiper('.activities__mobile_stages-swiper', {
+  autoplay: {
+    delay: 3000
+  },
+  loop: false,
+  breakpoints: {
+    375: {
+      slidesPerView: 2
+    },
+    550: {
+      slidesPerView: 3,
+      slidesPerGroupAuto: 2
+    },
+  },
+  modules: [Autoplay]
+})
+
+
 export {
   FLS,
   isWebp,

@@ -28,9 +28,13 @@ body {
   }
 }
 [class*="__mobile"] {
-  @include mobile(768) {
-    dispaly: none;
+    @include mobile {
+      display: none;
+    }
   }
+[class*="__mobile-container"] {
+  padding: 0 20px;
+  margin: 0 auto;
 }
 // Стили отзывчивых картинок (IBG) ============================================
 [class*="-ibg"] {

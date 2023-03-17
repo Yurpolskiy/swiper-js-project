@@ -40,6 +40,17 @@ h6 {
     text-transform: uppercase;
 }
 
+
+[class*="_btn"] {
+    background: $redColor;
+    font-family: $mainFont;
+    font-size: $paragraphFontSize + 2;
+    color: $whiteColor;
+    font-weight: 700;
+    border-radius: 7px;
+}
+
+
 p {
     font-family: 'Proxima Nova', sans-serif;
     @include adaptiveClamp(font-size, 16, 15, 1200, 768, 1);
@@ -59,13 +70,4 @@ p {
 
 .underline {
     text-decoration: underline;
-}
-
-[class*="_btn"] {
-    background: $redColor;
-    font-family: $mainFont;
-    font-size: $paragraphFontSize + 2;
-    color: $whiteColor;
-    font-weight: 700;
-    border-radius: 7px;
 }
